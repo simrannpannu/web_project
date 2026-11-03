@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Event Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>CampusEvents</h2>
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#registrations">My Registrations</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Discover Campus Events</h1>
+        <p>Explore, participate and make unforgettable college memories!</p>
+        <a href="#events" class="hero-btn">Explore Events</a>
+    </section>
+
+    <main class="container">
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+
+            <div class="filters">
+                <button class="filter-btn active" data-category="All">All</button>
+                <button class="filter-btn" data-category="Technical">Technical</button>
+                <button class="filter-btn" data-category="Cultural">Cultural</button>
+                <button class="filter-btn" data-category="Sports">Sports</button>
+            </div>
+
+            <div class="event-grid" id="eventList"></div>
+        </section>
+
+        <section class="registration-section" id="registration">
+            <h2>Event Registration</h2>
+
+            <form id="registrationForm">
+
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName"
+                       placeholder="Enter your name" required>
+
+                <label for="studentEmail">Email Address</label>
+                <input type="email" id="studentEmail"
+                       placeholder="Enter your email" required>
+
+                <label for="eventSelect">Select Event</label>
+                <select id="eventSelect" required>
+                    <option value="">Choose an event</option>
+                </select>
+
+                <button type="submit">Register Now</button>
+
+                <p id="message"></p>
+
+            </form>
+        </section>
+
+        <section id="registrations">
+            <h2>My Registrations</h2>
+            <div id="registrationList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 CampusEvents | College Event Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
